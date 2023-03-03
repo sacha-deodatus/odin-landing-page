@@ -18,7 +18,8 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+p {
     margin: 0;
 }
 
@@ -28,13 +29,17 @@ footer {
     background-color: #1f2937;
 }
 
+body {
+    margin: 0;
+}
+
 /*Boutons */
 button {
     background-color: #3882f6;
     color: #e5e7eb;
     border: 0;
     border-radius: 4px;
-    padding: 4px 8px;
+    padding: 8px 16px;
 }
 
 .contact button {
@@ -45,7 +50,13 @@ button:hover {
     background-color: #66a0ff;
 }
 
-/* Navbar */
+/* Header */
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+    /* Navbar */
 header a {
     text-decoration: none;
     color: #e5e7eb;
@@ -61,7 +72,25 @@ header ul {
     padding: 0;
 }
 
-/* Présentation */
+h1 {
+    margin-top: 5px;
+}
+
+.navbar {
+    /* Rapprocher ul de h1 en réduisant la taille de la fenêtre */
+    width: 1080px;
+    display: flex;
+    align-self: center;
+    justify-content: baseline;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 24px;
+    margin-left: auto;
+}
+
+    /* Présentation */
 .presentation h2 {
     color: #f9faf8;
     font-size: 32px;
@@ -71,17 +100,47 @@ header ul {
 .presentation {
     color: #e5e7eb;
     font-size: 18px;
+    width: 1080px;
+    display: flex;
+    align-self: center;
+    padding: 30px 0px;
 }
 
-.presentation div {
+.presentation .left-side {
+    width: 600px;
+}
+
+.presentation .left-side h2,
+.presentation .left-side p {
+    margin-bottom: 10px;
+}
+
+.presentation .right-side {
+    display: flex;
+    flex: 1;
+}
+
+.presentation .placeholder {
     background-color: #acacac;
     height: 150px;
     width: 300px;
+    margin: auto;
 }
 
 /* Equipe */
 .equipe {
     font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0px;
+}
+
+.liste-avocats {
+    display: flex;
+    width: 1080px;
+    justify-content: space-around;
+    margin-top: 20px;
 }
 
 .photo {
@@ -91,37 +150,68 @@ header ul {
     height: 200px;
 }
 
+.nom {
+    text-align: center;
+    margin-top: 10px;
+}
+
 /* Citation */
 .citation {
     background-color: #e5e7eb;
     font-size: 24px;
     font-style: italic;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    margin: 60px 0px;
+}
+
+.texte-citation {
+    width: 540px;
+    flex: 0 0 auto;
 }
 
 .citation .signature {
     font-style: normal;
     font-size: 18px;
     font-weight: bold;
+    text-align: end;
 }
 
 /* Contact */
 .contact {
     background-color: #3882f6;
     color: #e5e7eb;
+    width: 800px;
+    margin: 60px auto;
+    padding: 60px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .contact .titre {
     font-weight: bold;
 }
 
+.contact .left-side {
+    display: flex;
+    flex-direction: column;
+}
+
 /* Footer */
 footer {
     color: #e5e7eb;
+    text-align: center;
+    padding: 15px;
 }
 
 footer a {
     text-decoration: none;
     color: #e5e7eb;
+    margin-top: 10px;
 }
 
 footer a:hover {
